@@ -1,0 +1,5 @@
+vol.Tests/obj/*
+vol.Tests/bin/*
+vol/bin/*
+vol/obj/*
+/.vscode/*
