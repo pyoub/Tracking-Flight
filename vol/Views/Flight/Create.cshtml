@@ -1,0 +1,42 @@
+@model vol.Models.Entity.Flight
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Flight</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PlaneId" class="control-label"></label>
+                <select asp-for="PlaneId" class ="form-control" asp-items="ViewBag.Plane"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestinationId" class="control-label"></label>
+                <select asp-for="DestinationId" class ="form-control" asp-items="ViewBag.Destination"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArrivalId" class="control-label"></label>
+                <select asp-for="ArrivalId" class ="form-control" asp-items="ViewBag.Arrival"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="VoleTimeByHours" class="control-label"></label>
+                <input asp-for="VoleTimeByHours" class="form-control" />
+                <span asp-validation-for="VoleTimeByHours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
